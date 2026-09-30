@@ -116,8 +116,9 @@ export default function DashboardPage() {
 
   const topicMap = new Map(TOPICS.map((t) => [t.slug, t]));
 
+  const topicsList = summary?.topics || (summary as any)?.topic_breakdown || [];
   const displayTopics = TOPICS.map((t) => {
-    const progress = summary?.topics.find((p) => p.topic_slug === t.slug);
+    const progress = topicsList.find((p: any) => p.topic_slug === t.slug);
     return { ...t, progress };
   });
 

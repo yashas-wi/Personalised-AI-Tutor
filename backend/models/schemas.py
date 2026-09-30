@@ -204,6 +204,7 @@ class ProgressSummary(BaseModel):
     topics_started: int
     topics_mastered: int           # mastery_score >= 80
     topic_breakdown: List[TopicProgress]
+    topics: Optional[List[TopicProgress]] = None
 
 
 class UpdateLevelRequest(BaseModel):

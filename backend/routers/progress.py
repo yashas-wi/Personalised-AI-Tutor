@@ -104,6 +104,7 @@ async def get_progress_summary(user_id: str, db: Session = Depends(get_db)):
         topics_started=topics_started,
         topics_mastered=topics_mastered,
         topic_breakdown=topic_breakdown,
+        topics=topic_breakdown,
     )
 
 
