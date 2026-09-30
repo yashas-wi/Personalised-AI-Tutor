@@ -1,0 +1,32 @@
+﻿version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=
+      - FRONTEND_URL=http://localhost:3000
+      - DATABASE_URL=sqlite:///./ai_tutor.db
+      - CHROMA_PERSIST_DIR=./chroma_db
+    volumes:
+      - backend_data:/app/chroma_db
+      - backend_db:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+
+volumes:
+  backend_data:
+  backend_db:

@@ -1,0 +1,33 @@
+﻿# Environment variables
+.env
+.env.local
+*.env
+
+# Dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Next.js build
+.next/
+out/
+build/
+dist/
+
+# Database & Vector Store
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+backend/chroma_db/
+backend/ai_tutor.db
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
