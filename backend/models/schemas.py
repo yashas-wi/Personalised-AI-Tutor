@@ -72,10 +72,10 @@ class AssessmentQuestion(BaseModel):
 
 
 class AssessmentSubmission(BaseModel):
-    user_id: Optional[str] = None   # provided if user already exists
+    user_id: Optional[str] = None
     name: str
     email: Optional[str] = None
-    answers: List[dict]             # [{question_id, selected_option, question_text}]
+    answers: Any
 
 
 class AssessmentResult(BaseModel):
