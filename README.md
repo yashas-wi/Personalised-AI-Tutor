@@ -14,7 +14,7 @@ An adaptive AI tutoring platform that creates personalized learning paths for ma
 
 ## 🌐 Live Deployed Links
 
-- 🚀 **Live Web Application (Frontend)**: [https://personalised-ai-tutor.vercel.app](https://personalised-ai-tutor.vercel.app)
+- 🚀 **Live Web Application (Frontend)**: [https://personalised-ai-tutor.vercel.app](https://personalised-ai-tutor-frontend.vercel.app/)
 - ⚙️ **Live Backend API & Swagger Docs**: [https://personalised-ai-tutor-ep22.onrender.com/docs](https://personalised-ai-tutor-ep22.onrender.com/docs)
 - 📦 **GitHub Repository**: [https://github.com/yashas-wi/Personalised-AI-Tutor](https://github.com/yashas-wi/Personalised-AI-Tutor)
 
