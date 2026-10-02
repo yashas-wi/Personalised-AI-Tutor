@@ -79,8 +79,12 @@ class ProgressService:
         db.refresh(user)
         return user
 
-    def get_user(self, db: Session, user_id: str) -> Optional[User]:
-        return db.query(User).filter(User.id == user_id).first()
+    def get_user(self, db: Session, user_id: str) -> User:
+        """Fetch user by id; if not found, create a default learner profile."""
+        user = db.query(User).filter(User.id == user_id).first()
+        if not user:
+            user = self.get_or_create_user(db, user_id=user_id, name="Learner", level="beginner")
+        return user
 
     def update_user_level(self, db: Session, user_id: str, level: str) -> Optional[User]:
         user = db.query(User).filter(User.id == user_id).first()
